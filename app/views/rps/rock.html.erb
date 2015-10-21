@@ -1,45 +1,60 @@
 <div class="container">
 
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <a href="/rock" type="button" class="btn btn-primary">Play Rock</a>
+        <a href="/paper" type="button" class="btn btn-info">Play Paper</a>
+        <a href="/scissors" type="button" class="btn btn-primary">Play Scissors</a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
   <div class="row">
     <div class="col-sm-6">
-      <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">      <a href="/rock">Rock</a></button>
-        <button type="button" class="btn btn-default">      <a href="/paper">Paper</a></button>
-        <button type="button" class="btn btn-default"><a href="/scissors">Scissors</a></button>
+      <div class="panel panel-success">
+        <div class="panel-heading " color= #333 background-color= #f5f5f5>
+          <center><%= @user_move %></center>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="http://localhost:3000/assets/images/<%= @user_move %>.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-offset-0 col-sm-6">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <center><%= @computer_move %></center>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="http://localhost:3000/assets/images/<%= @computer_move %>.png">
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-3">
-      <div class="panel panel-default">
-      <div class="panel-heading" color= #333 background-color= #f5f5f5>
-          You played <%= @user_move %>!
-        </div>
-        <div class="panel-body">
-          <img src="http://localhost:3000/assets/images/<%= @user_move %>.png" height=100% width=100%>
-        </div>
-      </div>
-    </div>
+    <div class="col-sm-12">
 
-    <div class="col-sm-offset-0 col-sm-3">
       <div class="panel panel-default">
         <div class="panel-heading">
-          Computer played <%= @computer_move %>!
-        </div>
-        <div class="panel-body">
-          <img src="http://localhost:3000/assets/images/<%= @computer_move %>.png" height=100% width=100%>
-        </div>
+
+          <center>
+           <p></p>
+           <button type="button" class="btn btn-lg btn-<%= @buttoncolor %>">
+            <strong>You <%= @result %>!</strong>
+          </button>
+          <p></p>
+        </center>
+
       </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <button type="button" class="btn btn-<%= @buttoncolor %>">
-        You <%= @result %>
-      </button>
-    </div>
-  </div>
+</div>
 
 </div>

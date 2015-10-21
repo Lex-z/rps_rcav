@@ -1,17 +1,17 @@
 class RpsController <  ApplicationController
 
  def rock
-  @user_move = "rock"
-  @computer_move = ["rock", "paper", "scissors"].sample
+  @user_move = "Rock"
+  @computer_move = ["Rock", "Paper", "Scissors"].sample
 
   @result =
   if @user_move == @computer_move
     'tied'
-  elsif @user_move == "rock" && @computer_move == "paper"
+  elsif @user_move == "Rock" && @computer_move == "Paper"
     'lost'
-  elsif @user_move == "paper" && @computer_move == "scissors"
+  elsif @user_move == "Paper" && @computer_move == "Scissors"
     'lost'
-  elsif @user_move == "scissors" && @computer_move == "rock"
+  elsif @user_move == "Scissors" && @computer_move == "Rock"
     'lost'
   else
     'won'
@@ -28,17 +28,17 @@ class RpsController <  ApplicationController
 end
 
 def paper
-  @user_move = "paper"
-  @computer_move = ["rock", "paper", "scissors"].sample
+  @user_move = "Paper"
+  @computer_move = ["Rock", "Paper", "Scissors"].sample
 
   @result =
   if @user_move == @computer_move
     'tied'
-  elsif @user_move == "rock" && @computer_move == "paper"
+  elsif @user_move == "Rock" && @computer_move == "Paper"
     'lost'
-  elsif @user_move == "paper" && @computer_move == "scissors"
+  elsif @user_move == "Paper" && @computer_move == "Scissors"
     'lost'
-  elsif @user_move == "scissors" && @computer_move == "rock"
+  elsif @user_move == "Scissors" && @computer_move == "Rock"
     'lost'
   else
     'won'
@@ -55,17 +55,17 @@ def paper
 end
 
 def scissors
-  @user_move = "scissors"
-  @computer_move = ["rock", "paper", "scissors"].sample
+  @user_move = "Scissors"
+  @computer_move = ["Rock", "Paper", "Scissors"].sample
 
   @result =
   if @user_move == @computer_move
     'tied'
-  elsif @user_move == "rock" && @computer_move == "paper"
+  elsif @user_move == "Rock" && @computer_move == "Paper"
     'lost'
-  elsif @user_move == "paper" && @computer_move == "scissors"
+  elsif @user_move == "Paper" && @computer_move == "Scissors"
     'lost'
-  elsif @user_move == "scissors" && @computer_move == "rock"
+  elsif @user_move == "Scissors" && @computer_move == "Rock"
     'lost'
   else
     'won'
