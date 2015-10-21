@@ -1,11 +1,43 @@
-<h1>Paper</h1>
+<div class="container">
 
-<a href="/rock">Rock</a>
-<a href="/paper">Paper</a>
-<a href="/scissors">Scissors</a>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">      <a href="/rock">Rock</a></button>
+        <button type="button" class="btn btn-default">      <a href="/paper">Paper</a></button>
+        <button type="button" class="btn btn-default"><a href="/scissors">Scissors</a></button>
+      </div>
+    </div>
+  </div>
 
-<p>You played <%= @user_move %>!</p>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">You played <%= @user_move %>!</div>
+        <div class="panel-body">
+          <img src="http://localhost:3000/assets/images/<%= @user_move %>.png" height=100% width=100%>
+        </div>
+      </div>
+    </div>
 
-<p>The computer played <%= @computer_move %>!</p>
+    <div class="col-sm-offset-0 col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Computer played <%= @computer_move %>!
+        </div>
+        <div class="panel-body">
+          <img src="http://localhost:3000/assets/images/<%= @computer_move %>.png" height=100% width=100%>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p><%= @result %></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-<%= @buttoncolor %>">
+        You <%= @result %>
+      </button>
+    </div>
+  </div>
+
+</div>
